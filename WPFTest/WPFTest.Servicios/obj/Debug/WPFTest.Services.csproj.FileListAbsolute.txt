@@ -1,0 +1,13 @@
+c:\Users\arnapoli\documents\visual studio 2015\Projects\WPFTest\WPFTest.Servicios\bin\Debug\AutoMapper.dll
+c:\Users\arnapoli\documents\visual studio 2015\Projects\WPFTest\WPFTest.Servicios\bin\Debug\WPFTest.Data.dll
+c:\Users\arnapoli\documents\visual studio 2015\Projects\WPFTest\WPFTest.Servicios\bin\Debug\WPFTest.Model.dll
+c:\Users\arnapoli\documents\visual studio 2015\Projects\WPFTest\WPFTest.Servicios\bin\Debug\EntityFramework.dll
+c:\Users\arnapoli\documents\visual studio 2015\Projects\WPFTest\WPFTest.Servicios\bin\Debug\WPFTest.Data.pdb
+c:\Users\arnapoli\documents\visual studio 2015\Projects\WPFTest\WPFTest.Servicios\bin\Debug\WPFTest.Model.pdb
+c:\Users\arnapoli\documents\visual studio 2015\Projects\WPFTest\WPFTest.Servicios\bin\Debug\AutoMapper.xml
+c:\Users\arnapoli\documents\visual studio 2015\Projects\WPFTest\WPFTest.Servicios\bin\Debug\EntityFramework.xml
+c:\Users\arnapoli\documents\visual studio 2015\Projects\WPFTest\WPFTest.Servicios\obj\Debug\WPFTest.Services.csprojResolveAssemblyReference.cache
+c:\Users\arnapoli\documents\visual studio 2015\Projects\WPFTest\WPFTest.Servicios\bin\Debug\WPFTest.Services.dll
+c:\Users\arnapoli\documents\visual studio 2015\Projects\WPFTest\WPFTest.Servicios\bin\Debug\WPFTest.Services.pdb
+c:\Users\arnapoli\documents\visual studio 2015\Projects\WPFTest\WPFTest.Servicios\obj\Debug\WPFTest.Services.dll
+c:\Users\arnapoli\documents\visual studio 2015\Projects\WPFTest\WPFTest.Servicios\obj\Debug\WPFTest.Services.pdb

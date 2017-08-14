@@ -1,0 +1,12 @@
+c:\Users\arnapoli\documents\visual studio 2015\Projects\WPFTest\WPFTest.Data\bin\Debug\WPFTest.Data.dll
+c:\Users\arnapoli\documents\visual studio 2015\Projects\WPFTest\WPFTest.Data\bin\Debug\WPFTest.Data.pdb
+c:\Users\arnapoli\documents\visual studio 2015\Projects\WPFTest\WPFTest.Data\obj\Debug\WPFTest.Data.dll
+c:\Users\arnapoli\documents\visual studio 2015\Projects\WPFTest\WPFTest.Data\obj\Debug\WPFTest.Data.pdb
+c:\Users\arnapoli\documents\visual studio 2015\Projects\WPFTest\WPFTest.Data\bin\Debug\WPFTest.Data.dll.config
+c:\Users\arnapoli\documents\visual studio 2015\Projects\WPFTest\WPFTest.Data\bin\Debug\EntityFramework.dll
+c:\Users\arnapoli\documents\visual studio 2015\Projects\WPFTest\WPFTest.Data\bin\Debug\EntityFramework.SqlServer.dll
+c:\Users\arnapoli\documents\visual studio 2015\Projects\WPFTest\WPFTest.Data\bin\Debug\WPFTest.Model.dll
+c:\Users\arnapoli\documents\visual studio 2015\Projects\WPFTest\WPFTest.Data\bin\Debug\WPFTest.Model.pdb
+c:\Users\arnapoli\documents\visual studio 2015\Projects\WPFTest\WPFTest.Data\bin\Debug\EntityFramework.xml
+c:\Users\arnapoli\documents\visual studio 2015\Projects\WPFTest\WPFTest.Data\bin\Debug\EntityFramework.SqlServer.xml
+c:\Users\arnapoli\documents\visual studio 2015\Projects\WPFTest\WPFTest.Data\obj\Debug\WPFTest.Data.csprojResolveAssemblyReference.cache

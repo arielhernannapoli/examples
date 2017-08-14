@@ -1,0 +1,4 @@
+c:\Users\arnapoli\documents\visual studio 2015\Projects\WPFTest\WPFTest.Model\bin\Debug\WPFTest.Model.dll
+c:\Users\arnapoli\documents\visual studio 2015\Projects\WPFTest\WPFTest.Model\bin\Debug\WPFTest.Model.pdb
+c:\Users\arnapoli\documents\visual studio 2015\Projects\WPFTest\WPFTest.Model\obj\Debug\WPFTest.Model.dll
+c:\Users\arnapoli\documents\visual studio 2015\Projects\WPFTest\WPFTest.Model\obj\Debug\WPFTest.Model.pdb
