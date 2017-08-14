@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFTest.Model", "WPFTest.Mo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFTest.Infraestructure", "WPFTest.Infraestructure\WPFTest.Infraestructure.csproj", "{0D900BEB-B562-40E7-8A8B-A5D8EF89ED42}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{149DD36E-F27C-4D0B-BA6A-9D9A98AFD606}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DAL", "DAL", "{2922BA1D-72B4-4585-96FB-3D6E7F9B73E3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,5 +46,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3DE085F1-A08B-47C6-8057-13E4EDFE0611} = {149DD36E-F27C-4D0B-BA6A-9D9A98AFD606}
+		{E25EE7CD-7874-40BE-A22F-DEE29DF4EB4D} = {2922BA1D-72B4-4585-96FB-3D6E7F9B73E3}
+		{60073E99-C4FB-4168-BC32-7E17E49242C7} = {149DD36E-F27C-4D0B-BA6A-9D9A98AFD606}
 	EndGlobalSection
 EndGlobal
