@@ -1,21 +1,31 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using WPFTest.Data.Interfaces;
-using WPFTest.Model;
 using WPFTest.Model.DTO;
 
 namespace WPFTest.Data
 {
-    public class TestRepository : ITestRepository
+    public class TestRepository : BaseRepository<usuario>, ITestRepository
     {
-        private WpfTestEntities _context;
-
-        public TestRepository()
+        public void deleteUsuario(object id)
         {
-            _context = new WpfTestEntities();
+            var usuario = base.GetByID(id);
+            base.Delete(usuario);
+        }
+
+        public void addUsuario(usuario Usuario)
+        {
+            var _usuariosSet = _context.Set<usuario>();
+            _usuariosSet.Add(Usuario);
+        }
+
+        public void updateUsuario(usuario Usuario)
+        {
+            var usuario = base.GetByID(Usuario.id);
+            usuario.nombre = Usuario.nombre;
+            usuario.apellido = Usuario.apellido;
+            usuario.activo = Usuario.activo;
+            _context.Entry(usuario).State = System.Data.Entity.EntityState.Modified;
         }
 
         public List<Model.DTO.UsuarioDTO> getUsuarios()

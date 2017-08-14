@@ -19,6 +19,9 @@ namespace WPFTest.Servicios.Mapping
 
             CreateMap<Model.DTO.UsuarioDTO, Model.Usuario>();
             CreateMap<Model.Usuario, Model.DTO.UsuarioDTO>();
+
+            CreateMap<Model.Usuario, Data.usuario>();
+            CreateMap<Data.usuario, Model.Usuario>();
         }
     }
 }

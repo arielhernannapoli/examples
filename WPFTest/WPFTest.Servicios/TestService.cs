@@ -16,6 +16,21 @@ namespace WPFTest.Servicios
             _testRepository = new TestRepository();
         }
 
+        public void insertUsuario(Model.Usuario usuario)
+        {
+            _testRepository.addUsuario(Mapper.Map<Model.Usuario, Data.usuario>(usuario));
+        }
+
+        public void updateUsuario(Model.Usuario usuario)
+        {
+            _testRepository.updateUsuario(Mapper.Map<Model.Usuario, Data.usuario>(usuario));
+        }
+
+        public void deleteUsuario(Model.Usuario usuario)
+        {
+            _testRepository.deleteUsuario(usuario.Id);
+        }
+
         public List<Model.Usuario> getUsuarios()
         {
             IEnumerable<Model.DTO.UsuarioDTO> usuariosList = null;
