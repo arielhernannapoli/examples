@@ -14,7 +14,7 @@ namespace WPFTest.Data
     
     public partial class usuario
     {
-        public Nullable<int> id { get; set; }
+        public int id { get; set; }
         public string nombre { get; set; }
         public string apellido { get; set; }
         public string usuario1 { get; set; }
