@@ -11,6 +11,8 @@ namespace WPFTest.Model.DTO
         public int Id { get; set; }
         public String Nombre { get; set; }
         public String Apellido { get; set; }
+        public String NombreUsuario { get; set; }
+        public String Usuario { get { return this.NombreUsuario; } }
         public bool Activo { get; set; }
     }
 }

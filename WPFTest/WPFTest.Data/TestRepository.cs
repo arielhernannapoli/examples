@@ -11,12 +11,14 @@ namespace WPFTest.Data
         {
             var usuario = base.GetByID(id);
             base.Delete(usuario);
+            _context.SaveChanges();
         }
 
         public void addUsuario(usuario Usuario)
         {
             var _usuariosSet = _context.Set<usuario>();
             _usuariosSet.Add(Usuario);
+            _context.SaveChanges();
         }
 
         public void updateUsuario(usuario Usuario)
@@ -26,6 +28,7 @@ namespace WPFTest.Data
             usuario.apellido = Usuario.apellido;
             usuario.activo = Usuario.activo;
             _context.Entry(usuario).State = System.Data.Entity.EntityState.Modified;
+            _context.SaveChanges();
         }
 
         public List<Model.DTO.UsuarioDTO> getUsuarios()

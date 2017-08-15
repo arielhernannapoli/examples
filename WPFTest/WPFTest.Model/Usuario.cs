@@ -12,6 +12,7 @@ namespace WPFTest.Model
         private int _id;
         private String _nombre;
         private String _apellido;
+        private String _usuario;
         private bool _activo;
 
         public int Id
@@ -78,6 +79,23 @@ namespace WPFTest.Model
                 {
                     _activo = value;
                     RaisePropertyChanged("Activo"); 
+                }
+            }
+        }
+
+        public string NombreUsuario
+        {
+            get
+            {
+                return _usuario;
+            }
+
+            set
+            {
+                if (_usuario != value)
+                {
+                    _usuario = value;
+                    RaisePropertyChanged("NombreUsuario"); 
                 }
             }
         }
