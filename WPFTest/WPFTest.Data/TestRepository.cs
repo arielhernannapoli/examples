@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using WPFTest.Data.Interfaces;
 using WPFTest.Model.DTO;
@@ -7,6 +8,16 @@ namespace WPFTest.Data
 {
     public class TestRepository : BaseRepository<usuario>, ITestRepository
     {
+        public TestRepository()
+        {
+
+        }
+
+        public TestRepository(DbContext context)
+        {
+            this._context = context;
+        }
+
         public void deleteUsuario(object id)
         {
             var usuario = base.GetByID(id);

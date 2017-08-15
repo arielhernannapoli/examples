@@ -1,11 +1,12 @@
-﻿using System.Data.Entity.Infrastructure;
+﻿using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
 using WPFTest.Data.Interfaces;
 
 namespace WPFTest.Data
 {
     public class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : class
     {
-        protected WpfTestEntities _context;
+        protected DbContext _context;
 
         public BaseRepository()
         {

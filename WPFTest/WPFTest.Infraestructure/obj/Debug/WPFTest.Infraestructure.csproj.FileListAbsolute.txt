@@ -8,3 +8,4 @@ c:\Users\arnapoli\documents\visual studio 2015\Projects\WPFTest\WPFTest.Infraest
 c:\Users\arnapoli\documents\visual studio 2015\Projects\WPFTest\WPFTest.Infraestructure\bin\Debug\WindowsBase.dll
 c:\Users\arnapoli\documents\visual studio 2015\Projects\WPFTest\WPFTest.Infraestructure\obj\Debug\WPFTest.Infraestructure.dll
 c:\Users\arnapoli\documents\visual studio 2015\Projects\WPFTest\WPFTest.Infraestructure\obj\Debug\WPFTest.Infraestructure.pdb
+C:\Users\arnapoli\documents\visual studio 2015\Projects\WPFTest\WPFTest.Infraestructure\obj\Debug\WPFTest.Infraestructure.csprojResolveAssemblyReference.cache

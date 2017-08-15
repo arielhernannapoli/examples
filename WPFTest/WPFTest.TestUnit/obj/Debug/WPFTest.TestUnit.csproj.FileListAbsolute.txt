@@ -17,3 +17,14 @@ c:\Users\arnapoli\documents\visual studio 2015\Projects\WPFTest\WPFTest.TestUnit
 c:\Users\arnapoli\documents\visual studio 2015\Projects\WPFTest\WPFTest.TestUnit\bin\Debug\WPFTest.TestUnit.dll.config
 c:\Users\arnapoli\documents\visual studio 2015\Projects\WPFTest\WPFTest.TestUnit\bin\Debug\EntityFramework.SqlServer.dll
 c:\Users\arnapoli\documents\visual studio 2015\Projects\WPFTest\WPFTest.TestUnit\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\arnapoli\documents\visual studio 2015\Projects\WPFTest\WPFTest.TestUnit\bin\Debug\Castle.Core.dll
+C:\Users\arnapoli\documents\visual studio 2015\Projects\WPFTest\WPFTest.TestUnit\bin\Debug\Moq.dll
+C:\Users\arnapoli\documents\visual studio 2015\Projects\WPFTest\WPFTest.TestUnit\bin\Debug\Moq.pdb
+C:\Users\arnapoli\documents\visual studio 2015\Projects\WPFTest\WPFTest.TestUnit\bin\Debug\Moq.xml
+C:\Users\arnapoli\documents\visual studio 2015\Projects\WPFTest\WPFTest.TestUnit\bin\Debug\Effort.dll
+C:\Users\arnapoli\documents\visual studio 2015\Projects\WPFTest\WPFTest.TestUnit\bin\Debug\NMemory.dll
+C:\Users\arnapoli\documents\visual studio 2015\Projects\WPFTest\WPFTest.TestUnit\bin\Debug\Effort.xml
+C:\Users\arnapoli\documents\visual studio 2015\Projects\WPFTest\WPFTest.TestUnit\bin\Debug\NMemory.xml
+C:\Users\arnapoli\documents\visual studio 2015\Projects\WPFTest\WPFTest.TestUnit\bin\Debug\TestData\usuario.csv
+C:\Users\arnapoli\documents\visual studio 2015\Projects\WPFTest\WPFTest.TestUnit\bin\Debug\log4net.dll
+C:\Users\arnapoli\documents\visual studio 2015\Projects\WPFTest\WPFTest.TestUnit\bin\Debug\log4net.xml
