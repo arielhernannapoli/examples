@@ -1,10 +1,7 @@
 ﻿using System.Windows;
 using Microsoft.Practices.Unity;
-using WPFTest.Servicios;
-using WPFTest.Servicios.Interfaces;
 using WPFTest.ViewModel;
 using AutoMapper;
-using System;
 
 namespace WPFTest
 {
@@ -17,16 +14,9 @@ namespace WPFTest
         {
             base.OnStartup(e);
             this.ConfigurarMappings();
-            var viewModel = ConfigurarIoC().Resolve<ViewModelMain>();
+            var viewModel = UnityContainerHelper.GetContainer().Resolve<IViewModelMain>();
             var window = new MainWindow { DataContext = viewModel };
             window.Show();
-        }
-
-        private UnityContainer ConfigurarIoC()
-        {
-            UnityContainer container = new UnityContainer();
-            container.RegisterType<ITestService, TestService>();
-            return container;
         }
 
         private void ConfigurarMappings()

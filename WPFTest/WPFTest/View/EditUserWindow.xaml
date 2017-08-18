@@ -1,0 +1,26 @@
+﻿<Window x:Class="WPFTest.View.EditUserWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFTest.View"
+        WindowStartupLocation="CenterScreen"
+        x:Name="Edit_User_Window"
+        mc:Ignorable="d"
+        Title="EditUserWindow" Height="300" Width="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <StackPanel>
+            <Label x:Name="lblId" Content="Id"></Label>
+            <TextBox x:Name="txtId"></TextBox>
+            <Label x:Name="lblNombre" Content="Nombre"></Label>
+            <TextBox x:Name="txtNombre"></TextBox>
+            <Label x:Name="lblApellido" Content="Apellido"></Label>
+            <TextBox x:Name="txtApellido"></TextBox>
+        </StackPanel>
+        <Button Grid.Row="1" Content="Guardar cambios" Command="{Binding SaveChangesCommand}" CommandParameter="{Binding ElementName=Edit_User_Window}" Margin="5" Focusable="False"/>
+    </Grid>
+</Window>

@@ -35,3 +35,5 @@ c:\users\arnapoli\documents\visual studio 2015\Projects\WPFTest\WPFTest\bin\Debu
 c:\users\arnapoli\documents\visual studio 2015\Projects\WPFTest\WPFTest\bin\Debug\EntityFramework.SqlServer.xml
 c:\users\arnapoli\documents\visual studio 2015\Projects\WPFTest\WPFTest\bin\Debug\WPFTest.Infraestructure.dll
 c:\users\arnapoli\documents\visual studio 2015\Projects\WPFTest\WPFTest\bin\Debug\WPFTest.Infraestructure.pdb
+C:\Users\arnapoli\documents\visual studio 2015\Projects\WPFTest\WPFTest\obj\Debug\View\EditUserWindow.g.cs
+C:\Users\arnapoli\documents\visual studio 2015\Projects\WPFTest\WPFTest\obj\Debug\View\EditUserWindow.baml

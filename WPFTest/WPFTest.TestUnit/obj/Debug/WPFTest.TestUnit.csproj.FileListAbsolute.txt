@@ -25,6 +25,5 @@ C:\Users\arnapoli\documents\visual studio 2015\Projects\WPFTest\WPFTest.TestUnit
 C:\Users\arnapoli\documents\visual studio 2015\Projects\WPFTest\WPFTest.TestUnit\bin\Debug\NMemory.dll
 C:\Users\arnapoli\documents\visual studio 2015\Projects\WPFTest\WPFTest.TestUnit\bin\Debug\Effort.xml
 C:\Users\arnapoli\documents\visual studio 2015\Projects\WPFTest\WPFTest.TestUnit\bin\Debug\NMemory.xml
-C:\Users\arnapoli\documents\visual studio 2015\Projects\WPFTest\WPFTest.TestUnit\bin\Debug\TestData\usuario.csv
 C:\Users\arnapoli\documents\visual studio 2015\Projects\WPFTest\WPFTest.TestUnit\bin\Debug\log4net.dll
 C:\Users\arnapoli\documents\visual studio 2015\Projects\WPFTest\WPFTest.TestUnit\bin\Debug\log4net.xml
