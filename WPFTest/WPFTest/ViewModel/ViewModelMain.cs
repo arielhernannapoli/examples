@@ -39,6 +39,7 @@ namespace WPFTest.ViewModel
         #region Metodos Privados
         public RelayCommand AddUserCommand { get; set; }
         public RelayCommand EditUserCommand { get; set; }
+        public RelayCommand ViewReportCommand { get; set; }
 
         void EditUser(object parameter)
         {
@@ -52,6 +53,14 @@ namespace WPFTest.ViewModel
         {
             if (parameter == null) return;
             Usuarios.Add(new Model.Usuario { Id = 2, Nombre = parameter.ToString(), Apellido = parameter.ToString(), Activo = true });
+        }
+
+        void ViewReport(object parameter)
+        {
+            var viewModel = UnityContainerHelper.GetContainer().Resolve<IViewModelReportingServices>();
+            var window = new ReportingServicesWindow() { DataContext = viewModel };
+            window.Show();
+            ((MainWindow)parameter).Close();
         }
         #endregion
 
@@ -80,6 +89,7 @@ namespace WPFTest.ViewModel
 
             AddUserCommand = new RelayCommand(AddUser);
             EditUserCommand = new RelayCommand(EditUser);
+            ViewReportCommand = new RelayCommand(ViewReport);
         } 
         #endregion
     }

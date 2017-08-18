@@ -2,9 +2,6 @@
 using WPFTest.Data;
 using WPFTest.Data.Interfaces;
 using AutoMapper;
-using System.IO;
-using System;
-using Effort.DataLoaders;
 using System.Linq;
 
 namespace WPFTest.TestUnit

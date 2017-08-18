@@ -15,14 +15,19 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <DataGrid ItemsSource="{Binding Usuarios}" />
+            <StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <DataGrid ItemsSource="{Binding Usuarios}" />
+                </StackPanel>
+                <TextBox x:Name="nombre" />
+                <ComboBox x:Name="combo" ItemsSource="{Binding Sexo}" SelectedItem="{Binding SexoSelected}" />
+                <TextBox x:Name="sexo" Text="{Binding SexoSelected}" />
             </StackPanel>
-            <TextBox x:Name="nombre" />
-            <ComboBox x:Name="combo" ItemsSource="{Binding Sexo}" SelectedItem="{Binding SexoSelected}" />
-            <TextBox x:Name="sexo" Text="{Binding SexoSelected}" />
+            <StackPanel Orientation="Horizontal" Margin="20">
+                <Button Grid.Row="1" Width="150" Content="Agregar usuario" Command="{Binding AddUserCommand}" CommandParameter="{Binding Text, ElementName=nombre}" Focusable="False"/>
+                <Button Grid.Row="1" Width="150" Content="Editar usuario" Command="{Binding EditUserCommand}" CommandParameter="{Binding ElementName=Main_Window}" Focusable="False"/>
+                <Button Grid.Row="1" Width="150" Content="Ver reporte" Command="{Binding ViewReportCommand}" CommandParameter="{Binding ElementName=Main_Window}" Focusable="False"/>
+            </StackPanel>
         </StackPanel>
-        <Button Grid.Row="1" Content="Agregar usuario" Command="{Binding AddUserCommand}" CommandParameter="{Binding Text, ElementName=nombre}" Margin="5" Focusable="False"/>
-        <Button Grid.Row="1" Content="Editar usuario" Command="{Binding EditUserCommand}" CommandParameter="{Binding ElementName=Main_Window}" Margin="5" Focusable="False"/>
     </Grid>
 </Window>

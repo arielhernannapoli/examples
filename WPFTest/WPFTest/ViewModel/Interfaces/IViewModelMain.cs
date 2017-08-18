@@ -9,6 +9,7 @@ namespace WPFTest.ViewModel
     {
         RelayCommand AddUserCommand { get; set; }
         RelayCommand EditUserCommand { get; set; }
+        RelayCommand ViewReportCommand { get; set; }
         ObservableCollection<string> Sexo { get; set; }
         string SexoSelected { get; set; }
         ObservableCollection<Usuario> Usuarios { get; set; }

@@ -35,7 +35,5 @@ namespace WPFTest.ViewModel
             SaveChangesCommand = new RelayCommand(SaveChanges);
         }
         #endregion
-
-
     }
 }
