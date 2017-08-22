@@ -18,6 +18,6 @@ namespace WPFTest.Data
         public string nombre { get; set; }
         public string apellido { get; set; }
         public string usuario1 { get; set; }
-        public Nullable<bool> activo { get; set; }
+        public bool activo { get; set; }
     }
 }

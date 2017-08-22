@@ -14,13 +14,36 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <StackPanel>
-            <StackPanel>
+            <StackPanel Margin="20" Orientation="Horizontal">
                 <StackPanel Orientation="Horizontal">
-                    <DataGrid ItemsSource="{Binding Usuarios}"/>
+                    <DataGrid ItemsSource="{Binding Usuarios}" MouseDoubleClick="DataGrid_MouseDoubleClick"/>
                 </StackPanel>
             </StackPanel>
+            <StackPanel x:Name="PanelUsuario" Visibility="Hidden" Orientation="Horizontal" Margin="20">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Row="0" Grid.Column="0" x:Name="lblNombre" Content="Nombre del usuario: " HorizontalAlignment="Left" />
+                    <TextBox Grid.Row="0" Grid.Column="1" x:Name="txtNombre" Text="{Binding NombreUsuario}" Width="300" />
+                    <Label Grid.Row="1" Grid.Column="0" x:Name="lblApellido" Content="Apellido del usuario: " HorizontalAlignment="Left" />
+                    <TextBox Grid.Row="1" Grid.Column="1" x:Name="txtApellido" Text="{Binding ApellidoUsuario}" Width="300"  />
+                    <Label Grid.Row="2" Grid.Column="0" x:Name="lblUsuario" Content="Username: " HorizontalAlignment="Left" />
+                    <TextBox Grid.Row="2" Grid.Column="1" x:Name="txtUsuario" Text="{Binding Usuario}" Width="300"  />
+                    <Label Grid.Row="3" Grid.Column="0" x:Name="lblActivo" Content="Usuario activo: " HorizontalAlignment="Left" />
+                    <CheckBox Grid.Row="3" Grid.Column="1" x:Name="chkActivo" Content="Activo: " IsChecked="{Binding UsuarioActivo}" />
+                </Grid>
+            </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="20">
-                <Button Grid.Row="1" Width="150" Content="Agregar usuario" Command="{Binding AddUserCommand}" CommandParameter="{Binding Text, ElementName=nombre}" Focusable="False"/>
+                <Button Grid.Row="1" Width="150" Content="Agregar usuario" Command="{Binding AddUserCommand}" CommandParameter="{Binding ElementName=PanelUsuario}" Focusable="False"/>
+                <Button Grid.Row="1" Width="150" Content="Guardar usuario" Command="{Binding SaveUserCommand}" CommandParameter="{Binding ElementName=PanelUsuario}" Focusable="False" />
                 <Button Grid.Row="1" Width="150" Content="Salir" Click="ButtonSalir_Click" />
             </StackPanel>
         </StackPanel>        
