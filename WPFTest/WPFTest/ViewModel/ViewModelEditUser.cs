@@ -8,7 +8,7 @@ namespace WPFTest.ViewModel
     public class ViewModelEditUser : IViewModelEditUser
     {
         #region Servicios
-        private ITestService _testService;
+        private IUsuarioService _usuarioService;
         #endregion
 
         #region Metodos Privados
@@ -29,9 +29,9 @@ namespace WPFTest.ViewModel
             SaveChangesCommand = new RelayCommand(SaveChanges);
         }
 
-        public ViewModelEditUser(ITestService testService)
+        public ViewModelEditUser(IUsuarioService usuarioService)
         {
-            _testService = testService;
+            _usuarioService = usuarioService;
             SaveChangesCommand = new RelayCommand(SaveChanges);
         }
         #endregion

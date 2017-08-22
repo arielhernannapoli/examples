@@ -7,10 +7,10 @@ using System.Linq;
 namespace WPFTest.TestUnit
 {
     [TestClass]
-    public class TestUnit
+    public class TestUsuario
     {
         private WpfTestEntities _context;
-        private ITestRepository _testRepository;
+        private IUsuarioRepository _usuarioRepository;
 
         [TestInitialize]
         public void InitTest()
@@ -18,20 +18,20 @@ namespace WPFTest.TestUnit
             this.ConfigurarMappings();
             this._context = new WpfTestEntities(Effort.DbConnectionFactory.CreateTransient());
             this.FillMockData();
-            this._testRepository = new TestRepository(this._context);            
+            this._usuarioRepository = new UsuarioRepository(this._context);            
         }
 
         [TestMethod]
         public void obtenerUsuarios()
         {
-            var usuarios = this._testRepository.getUsuarios();
+            var usuarios = this._usuarioRepository.getUsuarios();
             Assert.AreEqual(usuarios.Count, 2);
         }
 
         [TestMethod]
         public void insertarUsuario()
         {
-            int cantidadPre = this._testRepository.getUsuarios().Count;
+            int cantidadPre = this._usuarioRepository.getUsuarios().Count;
             Assert.AreEqual(cantidadPre, 2);
             var usuario = new Data.usuario()
             {
@@ -41,8 +41,8 @@ namespace WPFTest.TestUnit
                 usuario1 = "pperez",              
                 activo = true
             };
-            this._testRepository.addUsuario(usuario);
-            int cantidadPost = this._testRepository.getUsuarios().Count;
+            this._usuarioRepository.addUsuario(usuario);
+            int cantidadPost = this._usuarioRepository.getUsuarios().Count;
             Assert.AreEqual(cantidadPost, 3);
         }
 
@@ -52,7 +52,7 @@ namespace WPFTest.TestUnit
             Data.usuario usuario = this._context.usuario.FirstOrDefault(u => u.id == 1);
             Assert.AreEqual(usuario.activo, true);
             usuario.activo = false;
-            this._testRepository.updateUsuario(usuario);
+            this._usuarioRepository.updateUsuario(usuario);
             Assert.AreEqual(usuario.activo, false);
         }
 
@@ -61,7 +61,7 @@ namespace WPFTest.TestUnit
         {
             Data.usuario usuario = this._context.usuario.FirstOrDefault(u => u.id == 1);
             Assert.IsNotNull(usuario);
-            this._testRepository.deleteUsuario(1);
+            this._usuarioRepository.deleteUsuario(1);
             usuario = this._context.usuario.FirstOrDefault(u => u.id == 1);
             Assert.IsNull(usuario);
         }

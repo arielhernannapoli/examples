@@ -2,7 +2,7 @@
 
 namespace WPFTest.Data.Interfaces
 {
-    public interface ITestRepository
+    public interface IUsuarioRepository
     {
         void deleteUsuario(object id);
         void addUsuario(usuario Usuario);

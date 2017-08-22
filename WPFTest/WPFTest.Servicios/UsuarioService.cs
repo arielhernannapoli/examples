@@ -7,34 +7,34 @@ using System.Linq;
 
 namespace WPFTest.Servicios
 {
-    public class TestService : ITestService
+    public class UsuarioService : IUsuarioService
     {
-        private readonly ITestRepository _testRepository;
+        private readonly IUsuarioRepository _usuarioRepository;
 
-        public TestService()
+        public UsuarioService()
         {
-            _testRepository = new TestRepository();
+            _usuarioRepository = new UsuarioRepository();
         }
 
         public void insertUsuario(Model.Usuario usuario)
         {
-            _testRepository.addUsuario(Mapper.Map<Model.Usuario, Data.usuario>(usuario));
+            _usuarioRepository.addUsuario(Mapper.Map<Model.Usuario, Data.usuario>(usuario));
         }
 
         public void updateUsuario(Model.Usuario usuario)
         {
-            _testRepository.updateUsuario(Mapper.Map<Model.Usuario, Data.usuario>(usuario));
+            _usuarioRepository.updateUsuario(Mapper.Map<Model.Usuario, Data.usuario>(usuario));
         }
 
         public void deleteUsuario(Model.Usuario usuario)
         {
-            _testRepository.deleteUsuario(usuario.Id);
+            _usuarioRepository.deleteUsuario(usuario.Id);
         }
 
         public List<Model.Usuario> getUsuarios()
         {
             IEnumerable<Model.DTO.UsuarioDTO> usuariosList = null;
-            usuariosList = _testRepository.getUsuarios();
+            usuariosList = _usuarioRepository.getUsuarios();
             var usuarios = from usuario in usuariosList
                            select Mapper.Map<Model.DTO.UsuarioDTO, Model.Usuario>(usuario);
             return usuarios.ToList();

@@ -2,7 +2,7 @@
 
 namespace WPFTest.Servicios.Interfaces
 {
-    public interface ITestService
+    public interface IUsuarioService
     {
         void insertUsuario(Model.Usuario usuario);
         void updateUsuario(Model.Usuario usuario);

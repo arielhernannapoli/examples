@@ -16,7 +16,7 @@ namespace WPFTest.ViewModel
         #endregion
 
         #region Servicios
-        private ITestService _testService; 
+        private IUsuarioService _usuarioService; 
         #endregion
 
         #region Propiedades
@@ -74,14 +74,14 @@ namespace WPFTest.ViewModel
         #endregion
 
         #region Constructor con IoC
-        public ViewModelMain(ITestService testService)
+        public ViewModelMain(IUsuarioService usuarioService)
         {
-            _testService = testService;
+            _usuarioService = usuarioService;
             Usuarios = new ObservableCollection<Model.Usuario>();
             Sexo = new ObservableCollection<string>();
             Sexo.Add("Masculino");
             Sexo.Add("Femenino");
-            var usuarios = _testService.getUsuarios();
+            var usuarios = _usuarioService.getUsuarios();
             foreach (var usuario in usuarios)
             {
                 Usuarios.Add(usuario);

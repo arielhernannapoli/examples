@@ -6,14 +6,14 @@ using WPFTest.Model.DTO;
 
 namespace WPFTest.Data
 {
-    public class TestRepository : BaseRepository<usuario>, ITestRepository
+    public class UsuarioRepository : BaseRepository<usuario>, IUsuarioRepository
     {
-        public TestRepository()
+        public UsuarioRepository()
         {
 
         }
 
-        public TestRepository(DbContext context)
+        public UsuarioRepository(DbContext context)
         {
             this._context = context;
         }
