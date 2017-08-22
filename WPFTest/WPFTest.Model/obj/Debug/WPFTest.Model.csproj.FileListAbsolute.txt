@@ -2,4 +2,3 @@ C:\Users\arnapoli\Documents\Visual Studio 2015\Projects\WPFTest\WPFTest.Model\bi
 C:\Users\arnapoli\Documents\Visual Studio 2015\Projects\WPFTest\WPFTest.Model\bin\Debug\WPFTest.Model.pdb
 C:\Users\arnapoli\Documents\Visual Studio 2015\Projects\WPFTest\WPFTest.Model\obj\Debug\WPFTest.Model.dll
 C:\Users\arnapoli\Documents\Visual Studio 2015\Projects\WPFTest\WPFTest.Model\obj\Debug\WPFTest.Model.pdb
-C:\Users\arnapoli\Documents\Visual Studio 2015\Projects\WPFTest\WPFTest.Model\obj\Debug\WPFTest.Model.csprojResolveAssemblyReference.cache
