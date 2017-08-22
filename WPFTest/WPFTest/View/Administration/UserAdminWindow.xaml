@@ -14,9 +14,34 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="20">
+                <Button Grid.Row="1" Width="150" Content="Agregar usuario" Command="{Binding AddUserCommand}" CommandParameter="{Binding ElementName=PanelUsuario}" Focusable="False"/>
+            </StackPanel>            
             <StackPanel Margin="20" Orientation="Horizontal">
                 <StackPanel Orientation="Horizontal">
-                    <DataGrid ItemsSource="{Binding Usuarios}" SelectedItem="{Binding UsuarioSeleccionado}"/>
+                    <DataGrid AutoGenerateColumns="False" ItemsSource="{Binding Usuarios}" SelectedItem="{Binding UsuarioSeleccionado}">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Id" Binding="{Binding Id}"/>
+                            <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}"/>
+                            <DataGridTextColumn Header="Apellido" Binding="{Binding Apellido}"/>
+                            <DataGridTextColumn Header="Usuario" Binding="{Binding NombreUsuario}"/>
+                            <DataGridCheckBoxColumn Header="Activo" Binding="{Binding Activo}"/>
+                            <DataGridTemplateColumn>
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Grid.Row="1" Content="*" Command="{Binding Path=DataContext.UpdateUserCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGrid}}}" CommandParameter="{Binding ElementName=PanelUsuario}" Focusable="False"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridTemplateColumn>
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Grid.Row="1" Content="-" Command="{Binding Path=DataContext.DeleteUserCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGrid}}}" CommandParameter="{Binding ElementName=PanelUsuario}" Focusable="False"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>                            
+                        </DataGrid.Columns>
+                    </DataGrid> 
                 </StackPanel>
             </StackPanel>
             <StackPanel x:Name="PanelUsuario" Visibility="Hidden" Orientation="Horizontal" Margin="20">
@@ -42,11 +67,8 @@
                 </Grid>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="20">
-                <Button Grid.Row="1" Width="150" Content="Agregar usuario" Command="{Binding AddUserCommand}" CommandParameter="{Binding ElementName=PanelUsuario}" Focusable="False"/>
-                <Button Grid.Row="1" Width="150" Content="Modificar usuario" Command="{Binding UpdateUserCommand}" CommandParameter="{Binding ElementName=PanelUsuario}" Focusable="False"/>
-                <Button Grid.Row="1" Width="150" Content="Eliminar usuario" Command="{Binding DeleteUserCommand}" CommandParameter="{Binding ElementName=PanelUsuario}" Focusable="False"/>
-                <Button Grid.Row="1" Width="150" Content="Guardar usuario" Command="{Binding SaveUserCommand}" CommandParameter="{Binding ElementName=PanelUsuario}" Focusable="False" />
-                <Button Grid.Row="1" Width="150" Content="Salir" Click="ButtonSalir_Click" />
+                <Button Grid.Row="1" Width="100" Content="Guardar" Command="{Binding SaveUserCommand}" CommandParameter="{Binding ElementName=PanelUsuario}" Focusable="False" />
+                <Button Grid.Row="1" Width="100" Content="Salir" Click="ButtonSalir_Click" />
             </StackPanel>
         </StackPanel>        
     </Grid>
