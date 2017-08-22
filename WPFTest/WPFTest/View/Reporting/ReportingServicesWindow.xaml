@@ -8,13 +8,13 @@
         xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
         mc:Ignorable="d"      
         x:Name="Reporting_Services_Window"
-        Title="ReportingServicesWindow" Height="500" Width="600">
+        Title="ReportingServicesWindow" Height="500" Width="600"
+        WindowStartupLocation="CenterScreen">
     <Grid>
         <StackPanel Grid.Row="1">
             <WindowsFormsHost Height="200">
                 <rv:ReportViewer x:Name="_reportViewer"/>
             </WindowsFormsHost>
         </StackPanel>
-        <Button Grid.Row="2" Height="25" Width="150" Content="Volver" Command="{Binding ReturnCommand}" CommandParameter="{Binding ElementName=Reporting_Services_Window}" Margin="5" Focusable="False"/>
     </Grid>
 </Window>

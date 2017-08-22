@@ -120,13 +120,19 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Helpers\UnityContainerHelper.cs" />
-    <Compile Include="ViewModel\Interfaces\IViewModelEditUser.cs" />
-    <Compile Include="ViewModel\Interfaces\IViewModelMain.cs" />
-    <Compile Include="ViewModel\Interfaces\IViewModelReportingServices.cs" />
-    <Compile Include="ViewModel\ViewModelEditUser.cs" />
+    <Compile Include="ViewModel\Administration\Interfaces\IViewModelUserAdmin.cs" />
+    <Compile Include="ViewModel\Administration\ViewModelUserAdmin.cs" />
+    <Compile Include="ViewModel\IViewModelMain.cs" />
+    <Compile Include="ViewModel\Reporting\Interfaces\IViewModelReportingServices.cs" />
     <Compile Include="ViewModel\ViewModelMain.cs" />
-    <Compile Include="ViewModel\ViewModelReportingServices.cs" />
-    <Compile Include="View\ReportingServicesWindow.xaml.cs">
+    <Compile Include="ViewModel\Reporting\ViewModelReportingServices.cs" />
+    <Compile Include="View\Administration\UserAdminWindow.xaml.cs">
+      <DependentUpon>UserAdminWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MenuControl.xaml.cs">
+      <DependentUpon>MenuControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Reporting\ReportingServicesWindow.xaml.cs">
       <DependentUpon>ReportingServicesWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="DataSources\WpfTestDataSet.Designer.cs">
@@ -134,7 +140,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>WpfTestDataSet.xsd</DependentUpon>
     </Compile>
-    <Page Include="View\EditUserWindow.xaml">
+    <Page Include="View\Administration\UserAdminWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -146,14 +152,15 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="View\EditUserWindow.xaml.cs">
-      <DependentUpon>EditUserWindow.xaml</DependentUpon>
-    </Compile>
     <Compile Include="View\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="View\ReportingServicesWindow.xaml">
+    <Page Include="View\MenuControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Reporting\ReportingServicesWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

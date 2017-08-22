@@ -7,9 +7,11 @@ namespace WPFTest
     /// </summary>
     public partial class MainWindow : Window
     {
+        #region Constructor
         public MainWindow()
         {
             InitializeComponent();
-        }
+        } 
+        #endregion
     }
 }

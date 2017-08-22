@@ -12,16 +12,21 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace WPFTest.View
+namespace WPFTest.View.Administration
 {
     /// <summary>
-    /// Interaction logic for EditUserWindow.xaml
+    /// Interaction logic for UserAdminWindow.xaml
     /// </summary>
-    public partial class EditUserWindow : Window
+    public partial class UserAdminWindow : Window
     {
-        public EditUserWindow()
+        public UserAdminWindow()
         {
             InitializeComponent();
+        }
+
+        private void ButtonSalir_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

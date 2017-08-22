@@ -4,30 +4,21 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         WindowStartupLocation="CenterScreen"
-        Title="MainWindow" Background="AliceBlue" 
+        Title="Pagina principal" Background="AliceBlue" 
         xmlns:local="clr-namespace:WPFTest"
+        xmlns:uc="clr-namespace:WPFTest.View"
         x:Name="Main_Window"
         mc:Ignorable="d"
-        Height="350" Width="525">
+        Height="350" Width="525"
+        WindowState="Maximized"
+        >
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition />
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <StackPanel>
-            <StackPanel>
-                <StackPanel Orientation="Horizontal">
-                    <DataGrid ItemsSource="{Binding Usuarios}" />
-                </StackPanel>
-                <TextBox x:Name="nombre" />
-                <ComboBox x:Name="combo" ItemsSource="{Binding Sexo}" SelectedItem="{Binding SexoSelected}" />
-                <TextBox x:Name="sexo" Text="{Binding SexoSelected}" />
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="20">
-                <Button Grid.Row="1" Width="150" Content="Agregar usuario" Command="{Binding AddUserCommand}" CommandParameter="{Binding Text, ElementName=nombre}" Focusable="False"/>
-                <Button Grid.Row="1" Width="150" Content="Editar usuario" Command="{Binding EditUserCommand}" CommandParameter="{Binding ElementName=Main_Window}" Focusable="False"/>
-                <Button Grid.Row="1" Width="150" Content="Ver reporte" Command="{Binding ViewReportCommand}" CommandParameter="{Binding ElementName=Main_Window}" Focusable="False"/>
-            </StackPanel>
+            <uc:MenuControl />
         </StackPanel>
     </Grid>
 </Window>

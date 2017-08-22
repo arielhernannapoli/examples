@@ -4,6 +4,6 @@ namespace WPFTest.ViewModel
 {
     public interface IViewModelReportingServices
     {
-        RelayCommand ReturnCommand { get; set; }
+
     }
 }
