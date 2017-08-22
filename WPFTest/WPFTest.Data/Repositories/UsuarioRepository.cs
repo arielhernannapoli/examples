@@ -52,6 +52,7 @@ namespace WPFTest.Data
                                Id = (int)u.id,
                                Nombre = u.nombre,
                                Apellido = u.apellido,
+                               NombreUsuario = u.usuario1,
                                Activo = (bool)u.activo
                            }).ToList();
 

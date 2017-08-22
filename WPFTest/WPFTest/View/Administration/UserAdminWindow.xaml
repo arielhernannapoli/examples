@@ -16,7 +16,7 @@
         <StackPanel>
             <StackPanel Margin="20" Orientation="Horizontal">
                 <StackPanel Orientation="Horizontal">
-                    <DataGrid ItemsSource="{Binding Usuarios}" MouseDoubleClick="DataGrid_MouseDoubleClick"/>
+                    <DataGrid ItemsSource="{Binding Usuarios}" SelectedItem="{Binding UsuarioSeleccionado}"/>
                 </StackPanel>
             </StackPanel>
             <StackPanel x:Name="PanelUsuario" Visibility="Hidden" Orientation="Horizontal" Margin="20">
@@ -43,6 +43,8 @@
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="20">
                 <Button Grid.Row="1" Width="150" Content="Agregar usuario" Command="{Binding AddUserCommand}" CommandParameter="{Binding ElementName=PanelUsuario}" Focusable="False"/>
+                <Button Grid.Row="1" Width="150" Content="Modificar usuario" Command="{Binding UpdateUserCommand}" CommandParameter="{Binding ElementName=PanelUsuario}" Focusable="False"/>
+                <Button Grid.Row="1" Width="150" Content="Eliminar usuario" Command="{Binding DeleteUserCommand}" CommandParameter="{Binding ElementName=PanelUsuario}" Focusable="False"/>
                 <Button Grid.Row="1" Width="150" Content="Guardar usuario" Command="{Binding SaveUserCommand}" CommandParameter="{Binding ElementName=PanelUsuario}" Focusable="False" />
                 <Button Grid.Row="1" Width="150" Content="Salir" Click="ButtonSalir_Click" />
             </StackPanel>

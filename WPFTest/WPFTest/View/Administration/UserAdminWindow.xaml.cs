@@ -1,5 +1,4 @@
 ﻿using System.Windows;
-using System.Windows.Input;
 
 namespace WPFTest.View.Administration
 {
@@ -20,11 +19,6 @@ namespace WPFTest.View.Administration
         {
             this.Close();
         }
-
-        private void DataGrid_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
-
-        } 
         #endregion
     }
 }

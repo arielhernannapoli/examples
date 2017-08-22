@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.ComponentModel;
 
 namespace WPFTest.Model
@@ -13,6 +9,7 @@ namespace WPFTest.Model
         private String _nombre;
         private String _apellido;
         private String _usuario;
+        private String _nombreUsuario;
         private bool _activo;
 
         public int Id
@@ -87,14 +84,14 @@ namespace WPFTest.Model
         {
             get
             {
-                return _usuario;
+                return _nombreUsuario;
             }
 
             set
             {
-                if (_usuario != value)
+                if (_nombreUsuario != value)
                 {
-                    _usuario = value;
+                    _nombreUsuario = value;
                     RaisePropertyChanged("NombreUsuario"); 
                 }
             }

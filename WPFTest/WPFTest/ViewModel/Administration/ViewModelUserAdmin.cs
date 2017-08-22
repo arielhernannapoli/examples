@@ -8,13 +8,41 @@ using WPFTest.ViewModel.Administration.Interfaces;
 
 namespace WPFTest.ViewModel.Administration
 {
-    public class ViewModelUserAdmin : IViewModelUserAdmin
+    public class ViewModelUserAdmin : IViewModelUserAdmin, INotifyPropertyChanged
     {
         #region Propiedades
+        private int _idUsuario;
         private String _nombreUsuario;
         private String _apellidoUsuario;
         private String _usuario;
         private bool _usuarioActivo;
+        private Model.Usuario _usuarioSeleccionado;
+
+        public Model.Usuario UsuarioSeleccionado
+        {
+            get
+            {
+                return _usuarioSeleccionado;
+            }
+            set
+            {
+                _usuarioSeleccionado = value;
+                RaisePropertyChanged("UsuarioSeleccionado");
+            }
+        }
+
+        public int IdUsuario
+        {
+            get
+            {
+                return _idUsuario;
+            }
+            set
+            {
+                _idUsuario = value;
+                RaisePropertyChanged("IdUsuario");
+            }
+        }
 
         public String NombreUsuario
         {
@@ -79,21 +107,67 @@ namespace WPFTest.ViewModel.Administration
 
         #region Metodos Privados
         public RelayCommand AddUserCommand { get; set; }
+        public RelayCommand UpdateUserCommand { get; set; }
+        public RelayCommand DeleteUserCommand { get; set; }
         public RelayCommand SaveUserCommand { get; set; }
 
         void AddUser(object parameter)
         {
+            this.IdUsuario = 0;
+            this.NombreUsuario = String.Empty;
+            this.ApellidoUsuario = String.Empty;
+            this.Usuario = String.Empty;
+            this.UsuarioActivo = false;
             ((StackPanel)parameter).Visibility = System.Windows.Visibility.Visible;
+        }
+
+        void UpdateUser(object parameter)
+        {
+            if (this.UsuarioSeleccionado != null)
+            {
+                this.IdUsuario = this.UsuarioSeleccionado.Id;
+                this.NombreUsuario = this.UsuarioSeleccionado.Nombre;
+                this.ApellidoUsuario = this.UsuarioSeleccionado.Apellido;
+                this.Usuario = this.UsuarioSeleccionado.NombreUsuario;
+                this.UsuarioActivo = this.UsuarioSeleccionado.Activo;
+                ((StackPanel)parameter).Visibility = System.Windows.Visibility.Visible;
+            }
+        }
+
+        void DeleteUser(object parameter)
+        {
+            if (this.UsuarioSeleccionado != null)
+            {
+                _usuarioService.deleteUsuario(this.UsuarioSeleccionado);
+                this.GetUsuarios();
+                ((StackPanel)parameter).Visibility = System.Windows.Visibility.Hidden;
+            }
         }
 
         void SaveUser(object parameter)
         {
-            _usuarioService.insertUsuario(new Model.Usuario {
-                Nombre = this.NombreUsuario,
-                Apellido = this.ApellidoUsuario,
-                NombreUsuario = this.Usuario,
-                Activo = this.UsuarioActivo
-            });
+            if (this.IdUsuario > 0)
+            {
+                _usuarioService.updateUsuario(new Model.Usuario
+                {
+                    Id = this.IdUsuario,
+                    Nombre = this.NombreUsuario,
+                    Apellido = this.ApellidoUsuario,
+                    NombreUsuario = this.Usuario,
+                    Activo = this.UsuarioActivo
+                });
+            }
+            else
+            {
+                _usuarioService.insertUsuario(new Model.Usuario
+                {
+                    Nombre = this.NombreUsuario,
+                    Apellido = this.ApellidoUsuario,
+                    NombreUsuario = this.Usuario,
+                    Activo = this.UsuarioActivo
+                });
+            } 
+
 
             this.GetUsuarios();
             ((StackPanel)parameter).Visibility = System.Windows.Visibility.Hidden;
@@ -115,6 +189,8 @@ namespace WPFTest.ViewModel.Administration
             _usuarioService = usuarioService;
             this.GetUsuarios();
             AddUserCommand = new RelayCommand(AddUser);
+            UpdateUserCommand = new RelayCommand(UpdateUser);
+            DeleteUserCommand = new RelayCommand(DeleteUser);
             SaveUserCommand = new RelayCommand(SaveUser);
         }
         #endregion
@@ -128,6 +204,7 @@ namespace WPFTest.ViewModel.Administration
             {
                 Usuarios.Add(usuario);
             }
+            RaisePropertyChanged("Usuarios");
         } 
         #endregion
     }

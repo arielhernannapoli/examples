@@ -10,19 +10,32 @@
 namespace WPFTest.Data
 {
     using System;
+    using System.Data.Common;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
-    
+
     public partial class WpfTestEntities : DbContext
     {
         public WpfTestEntities()
             : base("name=WpfTestEntities")
         {
         }
-    
+
+        public WpfTestEntities(string nameOrConnectionString)
+            : base(nameOrConnectionString)
+        {
+            this.Configuration.LazyLoadingEnabled = false;
+        }
+
+        public WpfTestEntities(DbConnection connection)
+            : base(connection, contextOwnsConnection:true)
+         {
+             this.Configuration.LazyLoadingEnabled = false;
+         }
+ 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            throw new UnintentionalCodeFirstException();
+            //throw new UnintentionalCodeFirstException();
         }
     
         public virtual DbSet<usuario> usuario { get; set; }
