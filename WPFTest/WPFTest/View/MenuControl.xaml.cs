@@ -32,6 +32,12 @@ namespace WPFTest.View
             window.Show();
         }
 
+        private void MenuReporteUsuariosServer_Click(object sender, RoutedEventArgs e)
+        {
+            var window = new Reporting.ReporteUsuariosWindow();
+            window.Show();
+        }
+
         private void MenuAdminUsuarios_Click(object sender, RoutedEventArgs e)
         {
             var viewModel = UnityContainerHelper.GetContainer().Resolve<IViewModelUserAdmin>();

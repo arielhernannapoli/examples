@@ -2,6 +2,7 @@
 using Microsoft.Practices.Unity;
 using WPFTest.ViewModel;
 using AutoMapper;
+using System;
 
 namespace WPFTest
 {

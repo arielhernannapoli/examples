@@ -26,8 +26,7 @@ namespace WPFTest.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDb)\\MSSqlLocalDB;Initial Catalog=WpfTest;Integrated Security=Tr" +
-            "ue")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=localhost;Initial Catalog=WpfTest;Integrated Security=True")]
         public string WpfTestConnectionString {
             get {
                 return ((string)(this["WpfTestConnectionString"]));

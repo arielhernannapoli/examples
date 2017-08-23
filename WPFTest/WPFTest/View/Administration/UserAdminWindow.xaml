@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WPFTest.View.Administration"
         mc:Ignorable="d"
         Title="Administracion de Usuarios" 
-        WindowStartupLocation="CenterScreen" FontSize="14"
+        WindowStartupLocation="CenterScreen" FontSize="14"        
         >
     <Grid>
         <Grid.RowDefinitions>

@@ -15,7 +15,8 @@
                 <MenuItem Header="Usuarios" HorizontalAlignment="Left" Click="MenuAdminUsuarios_Click"/>
             </MenuItem>
             <MenuItem Header="Reportes" HorizontalAlignment="Left">
-                <MenuItem Header="Usuarios" HorizontalAlignment="Left" Click="MenuReporteUsuarios_Click"/>
+                <MenuItem Header="Usuarios.Local" HorizontalAlignment="Left" Click="MenuReporteUsuarios_Click"/>
+                <MenuItem Header="Usuarios.Server" HorizontalAlignment="Left" Click="MenuReporteUsuariosServer_Click"/>
             </MenuItem>
         </Menu>
     </Grid>
