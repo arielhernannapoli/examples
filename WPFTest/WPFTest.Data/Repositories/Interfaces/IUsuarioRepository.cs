@@ -2,11 +2,8 @@
 
 namespace WPFTest.Data.Interfaces
 {
-    public interface IUsuarioRepository
+    public interface IUsuarioRepository : IBaseRepository<usuario>
     {
-        void deleteUsuario(object id);
-        void addUsuario(usuario Usuario);
-        void updateUsuario(usuario Usuario);
         List<Model.DTO.UsuarioDTO> getUsuarios();
     }
 }

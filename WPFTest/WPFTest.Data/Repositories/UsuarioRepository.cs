@@ -1,45 +1,16 @@
 ﻿using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
 using WPFTest.Data.Interfaces;
+using WPFTest.Infraestructure.UoW;
 using WPFTest.Model.DTO;
 
 namespace WPFTest.Data
 {
     public class UsuarioRepository : BaseRepository<usuario>, IUsuarioRepository
     {
-        public UsuarioRepository()
+        public UsuarioRepository(IUnitOfWork uow) : base(uow)
         {
 
-        }
-
-        public UsuarioRepository(DbContext context)
-        {
-            this._context = context;
-        }
-
-        public void deleteUsuario(object id)
-        {
-            var usuario = base.GetByID(id);
-            base.Delete(usuario);
-            _context.SaveChanges();
-        }
-
-        public void addUsuario(usuario Usuario)
-        {
-            var _usuariosSet = _context.Set<usuario>();
-            _usuariosSet.Add(Usuario);
-            _context.SaveChanges();
-        }
-
-        public void updateUsuario(usuario Usuario)
-        {
-            var usuario = base.GetByID(Usuario.id);
-            usuario.nombre = Usuario.nombre;
-            usuario.apellido = Usuario.apellido;
-            usuario.activo = Usuario.activo;
-            _context.Entry(usuario).State = System.Data.Entity.EntityState.Modified;
-            _context.SaveChanges();
         }
 
         public List<Model.DTO.UsuarioDTO> getUsuarios()

@@ -1,6 +1,11 @@
-﻿using System.Data.Entity;
+﻿using System;
+using System.Collections.Generic;
+using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
+using System.Linq;
+using System.Linq.Expressions;
 using WPFTest.Data.Interfaces;
+using WPFTest.Infraestructure.UoW;
 
 namespace WPFTest.Data
 {
@@ -8,9 +13,52 @@ namespace WPFTest.Data
     {
         protected DbContext _context;
 
-        public BaseRepository()
+        public BaseRepository(IUnitOfWork uow)
         {
-            _context = new WpfTestEntities();
+            _context = uow.Context;
+        }
+
+        public virtual IEnumerable<TEntity> GetWithRawSql(string query, params object[] parameters)
+        {
+            return _context.Set<TEntity>().SqlQuery(query, parameters).ToList();
+        }
+
+        public virtual IEnumerable<TEntity> GetWithRawSql(string query)
+        {
+            return _context.Set<TEntity>().SqlQuery(query).ToList();
+        }
+
+        public virtual int ExecuteSqlCommand(string command)
+        {
+            object[] args = new object[0];
+            return _context.Database.ExecuteSqlCommand(command, args);
+        }
+
+        public virtual IEnumerable<TEntity> Get(Expression<Func<TEntity, bool>> filter = null,
+            Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null,
+            string includeProperties = "")
+        {
+            IQueryable<TEntity> query = _context.Set<TEntity>();
+
+            if (filter != null)
+            {
+                query = query.Where(filter);
+            }
+
+            foreach (var includeProperty in includeProperties.Split
+                (new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+            {
+                query = query.Include(includeProperty);
+            }
+
+            if (orderBy != null)
+            {
+                return orderBy(query).ToList();
+            }
+            else
+            {
+                return query.ToList();
+            }
         }
 
         public void Delete(TEntity entityToDelete)

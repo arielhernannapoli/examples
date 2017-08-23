@@ -1,5 +1,6 @@
 ﻿using Microsoft.Reporting.WinForms;
 using System;
+using System.Configuration;
 using System.Windows;
 
 namespace WPFTest.View.Reporting
@@ -27,10 +28,10 @@ namespace WPFTest.View.Reporting
             if (!_isReportViewerLoaded)
             {
                 ReportDataSource reportDataSource = new ReportDataSource();
-                Uri reportServerUrl = new Uri(@"http://bue-h47lqc2/ReportServer_SQLEXPRESS");
+                Uri reportServerUrl = new Uri(ConfigurationManager.AppSettings["ReportingServices.Url"].ToString());
                 this._reportViewer.ProcessingMode = ProcessingMode.Remote;
                 this._reportViewer.ServerReport.ReportServerUrl = reportServerUrl;
-                this._reportViewer.ServerReport.ReportPath = "/Test/reporteUsuarios";
+                this._reportViewer.ServerReport.ReportPath = ConfigurationManager.AppSettings["ReportingServices.ReporteUsuarios.Path"].ToString();
                 this._reportViewer.RefreshReport();
                 _isReportViewerLoaded = true;
             }

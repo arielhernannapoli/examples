@@ -97,6 +97,10 @@
       <Project>{e25ee7cd-7874-40be-a22f-dee29df4eb4d}</Project>
       <Name>WPFTest.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\WPFTest.Infraestructure\WPFTest.Infraestructure.csproj">
+      <Project>{0d900beb-b562-40e7-8a8b-a5d8ef89ed42}</Project>
+      <Name>WPFTest.Infraestructure</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WPFTest.Model\WPFTest.Model.csproj">
       <Project>{60073e99-c4fb-4168-bc32-7e17e49242c7}</Project>
       <Name>WPFTest.Model</Name>

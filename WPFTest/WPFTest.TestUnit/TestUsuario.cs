@@ -2,23 +2,25 @@
 using WPFTest.Data;
 using WPFTest.Data.Interfaces;
 using AutoMapper;
-using System.Linq;
+using WPFTest.Infraestructure.UoW;
 
 namespace WPFTest.TestUnit
 {
     [TestClass]
     public class TestUsuario
     {
-        private WpfTestEntities _context;
+        private readonly int? usuarioId = 0;
+        private IUnitOfWork _uow;
         private IUsuarioRepository _usuarioRepository;
 
         [TestInitialize]
         public void InitTest()
         {
             this.ConfigurarMappings();
-            this._context = new WpfTestEntities(Effort.DbConnectionFactory.CreateTransient());
+            IDbContextFactory factory = new DbContextFactory(Effort.DbConnectionFactory.CreateTransient());           
+            this._uow = new UnitOfWork(factory);
+            this._usuarioRepository = new UsuarioRepository(this._uow);
             this.FillMockData();
-            this._usuarioRepository = new UsuarioRepository(this._context);            
         }
 
         [TestMethod]
@@ -41,7 +43,8 @@ namespace WPFTest.TestUnit
                 usuario1 = "pperez",              
                 activo = true
             };
-            this._usuarioRepository.addUsuario(usuario);
+            this._usuarioRepository.Insert(usuario);
+            this._uow.SaveChanges(usuarioId);
             int cantidadPost = this._usuarioRepository.getUsuarios().Count;
             Assert.AreEqual(cantidadPost, 3);
         }
@@ -49,28 +52,30 @@ namespace WPFTest.TestUnit
         [TestMethod]
         public void actualizarUsuario()
         {
-            Data.usuario usuario = this._context.usuario.FirstOrDefault(u => u.id == 1);
+            Data.usuario usuario = this._usuarioRepository.GetByID(1);
             Assert.AreEqual(usuario.activo, true);
             usuario.activo = false;
-            this._usuarioRepository.updateUsuario(usuario);
+            this._usuarioRepository.Update(usuario);
+            this._uow.SaveChanges(usuarioId);
             Assert.AreEqual(usuario.activo, false);
         }
 
         [TestMethod]
         public void eliminarUsuario()
         {
-            Data.usuario usuario = this._context.usuario.FirstOrDefault(u => u.id == 1);
+            Data.usuario usuario = this._usuarioRepository.GetByID(1);
             Assert.IsNotNull(usuario);
-            this._usuarioRepository.deleteUsuario(1);
-            usuario = this._context.usuario.FirstOrDefault(u => u.id == 1);
+            this._usuarioRepository.Delete(1);
+            this._uow.SaveChanges(usuarioId);
+            usuario = this._usuarioRepository.GetByID(1);
             Assert.IsNull(usuario);
         }
 
         private void FillMockData()
         {
-            this._context.usuario.Add(new usuario() { id = 1, nombre = "Ariel", apellido = "Napoli", activo = true });
-            this._context.usuario.Add(new usuario() { id = 2, nombre = "Hernan", apellido = "Alzueta", activo = true });
-            this._context.SaveChanges();
+            this._usuarioRepository.Insert(new usuario() { id = 1, nombre = "Ariel", apellido = "Napoli", activo = true });
+            this._usuarioRepository.Insert(new usuario() { id = 2, nombre = "Hernan", apellido = "Alzueta", activo = true });
+            this._uow.SaveChanges(usuarioId);
         }
 
         private void ConfigurarMappings()
