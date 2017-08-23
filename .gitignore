@@ -10,3 +10,9 @@ WPFTest/WPFTest.TestUnit/bin/
 WPFTest/WPFTest.TestUnit/obj/
 WPFTest/WPFTest/bin/
 WPFTest/WPFTest/obj/
+WPFTest/WPFTest.Data/*.user
+WPFTest/WPFTest.Infraestructure/*.user
+WPFTest/WPFTest.Model/*.user
+WPFTest/WPFTest.Servicios/*.user
+WPFTest/WPFTest.TestUnit/*.user
+WPFTest/WPFTest/*.user
