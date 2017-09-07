@@ -1,0 +1,29 @@
+@model Example.Web.Models.UsuarioViewModel
+@using Example.Model.DTO
+
+<div style="padding:20px;">
+    <table width="300px">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Usuario</th>
+            <th>Activo</th>
+        </tr>
+        </thead>
+        <tbody>
+            @foreach(Usuario u in Model.Usuarios) {
+            <tr>
+                <td>@u.Id</td>
+                <td>@u.Nombre</td>
+                <td>@u.Apellido</td>
+                <td>@u.NombreUsuario</td>
+                <td>@u.Activo</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+
