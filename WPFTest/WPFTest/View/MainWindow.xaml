@@ -1,0 +1,24 @@
+﻿<Window x:Class="WPFTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        WindowStartupLocation="CenterScreen"
+        Title="Pagina principal" Background="AliceBlue" 
+        xmlns:local="clr-namespace:WPFTest"
+        xmlns:uc="clr-namespace:WPFTest.View"
+        x:Name="Main_Window"
+        mc:Ignorable="d"
+        Height="350" Width="525"
+        WindowState="Maximized"
+        >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <StackPanel>
+            <uc:MenuControl />
+        </StackPanel>
+    </Grid>
+</Window>
