@@ -16,6 +16,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example.Test", "Example.Tes
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example.xTest", "Example.xTest\Example.xTest.csproj", "{B9554870-4D5B-4506-86CE-7E5214C02432}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{C9D82CDF-0D0F-4928-8974-FCB6CA83C62F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Querys", "Querys", "{4C2E9609-7B4A-4E1C-ABD2-4786D292F11B}"
+	ProjectSection(SolutionItems) = preProject
+		Consulta_Usuarios.sql = Consulta_Usuarios.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -113,6 +120,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4C2E9609-7B4A-4E1C-ABD2-4786D292F11B} = {C9D82CDF-0D0F-4928-8974-FCB6CA83C62F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {758E0AFB-3C16-4F3A-905C-0D4409D84301}
