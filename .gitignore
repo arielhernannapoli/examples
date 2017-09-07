@@ -42,3 +42,5 @@ WPFTest/WPFTest.Model/*.user
 WPFTest/WPFTest.Servicios/*.user
 WPFTest/WPFTest.TestUnit/*.user
 WPFTest/WPFTest/*.user
+/Core.App/Example.xTest/bin/Debug/netcoreapp2.0
+/Core.App/Example.xTest/obj
