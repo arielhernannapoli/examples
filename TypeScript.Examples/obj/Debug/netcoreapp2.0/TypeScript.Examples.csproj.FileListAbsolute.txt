@@ -1,0 +1,10 @@
+c:\Code\TypeScript.Examples\bin\Debug\netcoreapp2.0\TypeScript.Examples.deps.json
+c:\Code\TypeScript.Examples\bin\Debug\netcoreapp2.0\TypeScript.Examples.runtimeconfig.json
+c:\Code\TypeScript.Examples\bin\Debug\netcoreapp2.0\TypeScript.Examples.runtimeconfig.dev.json
+c:\Code\TypeScript.Examples\bin\Debug\netcoreapp2.0\TypeScript.Examples.dll
+c:\Code\TypeScript.Examples\bin\Debug\netcoreapp2.0\TypeScript.Examples.pdb
+c:\Code\TypeScript.Examples\obj\Debug\netcoreapp2.0\TypeScript.Examples.csproj.CoreCompileInputs.cache
+c:\Code\TypeScript.Examples\obj\Debug\netcoreapp2.0\TypeScript.Examples.AssemblyInfoInputs.cache
+c:\Code\TypeScript.Examples\obj\Debug\netcoreapp2.0\TypeScript.Examples.AssemblyInfo.cs
+c:\Code\TypeScript.Examples\obj\Debug\netcoreapp2.0\TypeScript.Examples.dll
+c:\Code\TypeScript.Examples\obj\Debug\netcoreapp2.0\TypeScript.Examples.pdb
