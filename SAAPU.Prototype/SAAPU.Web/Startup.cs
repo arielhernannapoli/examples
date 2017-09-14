@@ -57,7 +57,7 @@ namespace SAAPU.Web
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Account}/{action=Index}/{id?}");
+                    template: "{controller=Account}/{action=Login}/{id?}");
             
                 routes.MapAreaRoute(
                     name: "admin_default",
