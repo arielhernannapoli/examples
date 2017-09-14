@@ -1,0 +1,8 @@
+C:\Code\SAAPU.Prototype\SAAPU.Data.Identity\bin\Debug\netcoreapp2.0\SAAPU.Data.Identity.deps.json
+C:\Code\SAAPU.Prototype\SAAPU.Data.Identity\bin\Debug\netcoreapp2.0\SAAPU.Data.Identity.dll
+C:\Code\SAAPU.Prototype\SAAPU.Data.Identity\bin\Debug\netcoreapp2.0\SAAPU.Data.Identity.pdb
+C:\Code\SAAPU.Prototype\SAAPU.Data.Identity\obj\Debug\netcoreapp2.0\SAAPU.Data.Identity.csproj.CoreCompileInputs.cache
+C:\Code\SAAPU.Prototype\SAAPU.Data.Identity\obj\Debug\netcoreapp2.0\SAAPU.Data.Identity.AssemblyInfoInputs.cache
+C:\Code\SAAPU.Prototype\SAAPU.Data.Identity\obj\Debug\netcoreapp2.0\SAAPU.Data.Identity.AssemblyInfo.cs
+C:\Code\SAAPU.Prototype\SAAPU.Data.Identity\obj\Debug\netcoreapp2.0\SAAPU.Data.Identity.dll
+C:\Code\SAAPU.Prototype\SAAPU.Data.Identity\obj\Debug\netcoreapp2.0\SAAPU.Data.Identity.pdb

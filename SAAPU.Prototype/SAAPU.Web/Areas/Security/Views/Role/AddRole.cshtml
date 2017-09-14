@@ -1,0 +1,20 @@
+@model SAAPU.Web.Areas.Security.Models.RoleViewModel
+@{
+    ViewData["Title"] = "Add Role";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>New Role</h2>
+
+<hr />
+
+@using (Html.BeginForm("AddRole", "Role", FormMethod.Post))
+{
+    @Html.LabelFor(role => role.Name)
+    @Html.TextBoxFor(role => role.Name)
+
+    @Html.LabelFor(role => role.Description)
+    @Html.TextBoxFor(role => role.Description)
+
+    <input type="submit" value="Save" />
+}
