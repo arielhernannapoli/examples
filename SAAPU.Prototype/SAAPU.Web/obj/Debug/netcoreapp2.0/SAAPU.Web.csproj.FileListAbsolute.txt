@@ -3,8 +3,12 @@ C:\Code\SAAPU.Prototype\SAAPU.Web\bin\Debug\netcoreapp2.0\SAAPU.Web.runtimeconfi
 C:\Code\SAAPU.Prototype\SAAPU.Web\bin\Debug\netcoreapp2.0\SAAPU.Web.runtimeconfig.dev.json
 C:\Code\SAAPU.Prototype\SAAPU.Web\bin\Debug\netcoreapp2.0\SAAPU.Web.dll
 C:\Code\SAAPU.Prototype\SAAPU.Web\bin\Debug\netcoreapp2.0\SAAPU.Web.pdb
+C:\Code\SAAPU.Prototype\SAAPU.Web\bin\Debug\netcoreapp2.0\SAAPU.Data.EF.dll
 C:\Code\SAAPU.Prototype\SAAPU.Web\bin\Debug\netcoreapp2.0\SAAPU.Data.Identity.dll
+C:\Code\SAAPU.Prototype\SAAPU.Web\bin\Debug\netcoreapp2.0\SAAPU.Infraestructure.dll
 C:\Code\SAAPU.Prototype\SAAPU.Web\bin\Debug\netcoreapp2.0\SAAPU.Data.Identity.pdb
+C:\Code\SAAPU.Prototype\SAAPU.Web\bin\Debug\netcoreapp2.0\SAAPU.Data.EF.pdb
+C:\Code\SAAPU.Prototype\SAAPU.Web\bin\Debug\netcoreapp2.0\SAAPU.Infraestructure.pdb
 C:\Code\SAAPU.Prototype\SAAPU.Web\obj\Debug\netcoreapp2.0\SAAPU.Web.csproj.CoreCompileInputs.cache
 C:\Code\SAAPU.Prototype\SAAPU.Web\obj\Debug\netcoreapp2.0\SAAPU.Web.AssemblyInfoInputs.cache
 C:\Code\SAAPU.Prototype\SAAPU.Web\obj\Debug\netcoreapp2.0\SAAPU.Web.AssemblyInfo.cs

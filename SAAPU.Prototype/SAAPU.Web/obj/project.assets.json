@@ -4747,6 +4747,20 @@
           "lib/netstandard1.3/Microsoft.WindowsAzure.Storage.dll": {}
         }
       },
+      "SAAPU.Data.EF/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "2.0.0"
+        },
+        "compile": {
+          "bin/placeholder/SAAPU.Data.EF.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SAAPU.Data.EF.dll": {}
+        }
+      },
       "SAAPU.Data.Identity/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.0",
@@ -4760,6 +4774,16 @@
         },
         "runtime": {
           "bin/placeholder/SAAPU.Data.Identity.dll": {}
+        }
+      },
+      "SAAPU.Infraestructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "compile": {
+          "bin/placeholder/SAAPU.Infraestructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SAAPU.Infraestructure.dll": {}
         }
       }
     }
@@ -12540,17 +12564,29 @@
         "windowsazure.storage.nuspec"
       ]
     },
+    "SAAPU.Data.EF/1.0.0": {
+      "type": "project",
+      "path": "../SAAPU.Data.EF/SAAPU.Data.EF.csproj",
+      "msbuildProject": "../SAAPU.Data.EF/SAAPU.Data.EF.csproj"
+    },
     "SAAPU.Data.Identity/1.0.0": {
       "type": "project",
       "path": "../SAAPU.Data.Identity/SAAPU.Data.Identity.csproj",
       "msbuildProject": "../SAAPU.Data.Identity/SAAPU.Data.Identity.csproj"
+    },
+    "SAAPU.Infraestructure/1.0.0": {
+      "type": "project",
+      "path": "../SAAPU.Infraestructure/SAAPU.Infraestructure.csproj",
+      "msbuildProject": "../SAAPU.Infraestructure/SAAPU.Infraestructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
       "Microsoft.AspNetCore.All >= 2.0.0",
       "Microsoft.NETCore.App >= 2.0.0",
-      "SAAPU.Data.Identity >= 1.0.0"
+      "SAAPU.Data.EF >= 1.0.0",
+      "SAAPU.Data.Identity >= 1.0.0",
+      "SAAPU.Infraestructure >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -12585,6 +12621,12 @@
           "projectReferences": {
             "C:\\Code\\SAAPU.Prototype\\SAAPU.Data.Identity\\SAAPU.Data.Identity.csproj": {
               "projectPath": "C:\\Code\\SAAPU.Prototype\\SAAPU.Data.Identity\\SAAPU.Data.Identity.csproj"
+            },
+            "C:\\Code\\SAAPU.Prototype\\SAAPU.Data.EF\\SAAPU.Data.EF.csproj": {
+              "projectPath": "C:\\Code\\SAAPU.Prototype\\SAAPU.Data.EF\\SAAPU.Data.EF.csproj"
+            },
+            "C:\\Code\\SAAPU.Prototype\\SAAPU.Infraestructure\\SAAPU.Infraestructure.csproj": {
+              "projectPath": "C:\\Code\\SAAPU.Prototype\\SAAPU.Infraestructure\\SAAPU.Infraestructure.csproj"
             }
           }
         }

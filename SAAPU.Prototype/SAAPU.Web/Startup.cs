@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using SAAPU.Data.EF;
 using SAAPU.Data.Identity;
 
 namespace SAAPU.Web
@@ -24,6 +25,9 @@ namespace SAAPU.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<SAAPUDbContext>(options => 
+                options.UseSqlServer(Configuration.GetConnectionString("identityConnection"), b => b.MigrationsAssembly("SAAPU.Web")));
+
             services.AddDbContext<SAAPUIdentityDbContext>(options => 
                 options.UseSqlServer(Configuration.GetConnectionString("identityConnection"), b=> b.MigrationsAssembly("SAAPU.Web")));
                 
