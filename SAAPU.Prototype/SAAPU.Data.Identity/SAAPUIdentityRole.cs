@@ -4,7 +4,7 @@ using System;
 
 namespace SAAPU.Data.Identity
 {
-    public class SAAPUIdentityRole : IdentityRole 
+    public class SAAPUIdentityRole : IdentityRole<int>
     {
         public string Description { get; set; }
         public DateTime CreatedDate { get; set; }

@@ -44,4 +44,12 @@ WPFTest/WPFTest.TestUnit/*.user
 WPFTest/WPFTest/*.user
 /Core.App/Example.xTest/bin/Debug/netcoreapp2.0
 /Core.App/Example.xTest/obj
+/SAAPU.Prototype/SAAPU.Web/bin/
+/SAAPU.Prototype/SAAPU.Web/obj/
+/SAAPU.Prototype/SAAPU.Data.EF/bin/
+/SAAPU.Prototype/SAAPU.Data.EF/obj/
+/SAAPU.Prototype/SAAPU.Data.Identity/bin/
+/SAAPU.Prototype/SAAPU.Data.Identity/obj/
+/SAAPU.Prototype/SAAPU.Infraestructure/bin/
+/SAAPU.Prototype/SAAPU.Infraestructure/obj/
 /.vs

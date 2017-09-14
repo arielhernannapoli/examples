@@ -16,6 +16,9 @@
     @Html.LabelFor(user => user.Email)
     @Html.TextBoxFor(user => user.Email)
 
+    @Html.LabelFor(user=> user.Password)
+    @Html.PasswordFor(user=> user.Password)
+        
     @Html.LabelFor(user => user.Roles)
     @Html.DropDownListFor(user => user.RoleId,
                          new SelectList(

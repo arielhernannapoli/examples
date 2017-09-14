@@ -51,8 +51,8 @@ namespace SAAPU.Web.Areas.Security.Controllers
                 SAAPUIdentityUser applicationUser = new SAAPUIdentityUser();
                 applicationUser.Name = model.Name;
                 applicationUser.Email = model.Email;
-                applicationUser.UserName = model.Name;
-                IdentityResult userRuslt = await _userManager.CreateAsync(applicationUser);
+                applicationUser.UserName = model.Name;                
+                IdentityResult userRuslt = await _userManager.CreateAsync(applicationUser, model.Password);
                 if (userRuslt.Succeeded)
                 {
                     SAAPUIdentityRole applicationRole = await _roleManager.FindByIdAsync(model.RoleId);
