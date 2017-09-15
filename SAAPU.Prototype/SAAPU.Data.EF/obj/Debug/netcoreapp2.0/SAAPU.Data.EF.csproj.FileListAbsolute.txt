@@ -1,8 +1,0 @@
-C:\Code\SAAPU.Prototype\SAAPU.Data.EF\bin\Debug\netcoreapp2.0\SAAPU.Data.EF.deps.json
-C:\Code\SAAPU.Prototype\SAAPU.Data.EF\bin\Debug\netcoreapp2.0\SAAPU.Data.EF.dll
-C:\Code\SAAPU.Prototype\SAAPU.Data.EF\bin\Debug\netcoreapp2.0\SAAPU.Data.EF.pdb
-C:\Code\SAAPU.Prototype\SAAPU.Data.EF\obj\Debug\netcoreapp2.0\SAAPU.Data.EF.csproj.CoreCompileInputs.cache
-C:\Code\SAAPU.Prototype\SAAPU.Data.EF\obj\Debug\netcoreapp2.0\SAAPU.Data.EF.AssemblyInfoInputs.cache
-C:\Code\SAAPU.Prototype\SAAPU.Data.EF\obj\Debug\netcoreapp2.0\SAAPU.Data.EF.AssemblyInfo.cs
-C:\Code\SAAPU.Prototype\SAAPU.Data.EF\obj\Debug\netcoreapp2.0\SAAPU.Data.EF.dll
-C:\Code\SAAPU.Prototype\SAAPU.Data.EF\obj\Debug\netcoreapp2.0\SAAPU.Data.EF.pdb
