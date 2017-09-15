@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using SAAPU.Data.EF;
 using SAAPU.Data.Identity;
+using SAAPU.Web.Ldap;
 
 namespace SAAPU.Web
 {
@@ -25,6 +26,10 @@ namespace SAAPU.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.Configure<LdapConfig>(Configuration.GetSection("ldap"));
+
+            services.AddScoped<IAuthenticationService, LdapAuthenticationService>();
+
             services.AddDbContext<SAAPUDbContext>(options => 
                 options.UseSqlServer(Configuration.GetConnectionString("identityConnection"), b => b.MigrationsAssembly("SAAPU.Web")));
 
@@ -51,8 +56,9 @@ namespace SAAPU.Web
             }
 
             app.UseStaticFiles();
+            
             app.UseAuthentication();
-
+            
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
