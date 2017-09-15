@@ -9,5 +9,18 @@ namespace SAAPU.Data.Identity
         {
 
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            /*
+            modelBuilder.Entity<SAAPUIdentityUser>().ToTable("Usuario");
+            modelBuilder.Entity<SAAPUIdentityRole>().ToTable("Rol");
+            modelBuilder.Entity<SAAPUIdentityUserRole>().ToTable("UsuarioRoles");
+            modelBuilder.Entity<SAAPUIdentityUserLogin>().ToTable("UsuarioLogin");
+            modelBuilder.Entity<SAAPUIdentityUserClaim>().ToTable("UsuarioClaim");
+            */
+        }
     }
 }

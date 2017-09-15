@@ -30,7 +30,7 @@ namespace SAAPU.Web
 
             services.AddDbContext<SAAPUIdentityDbContext>(options => 
                 options.UseSqlServer(Configuration.GetConnectionString("identityConnection"), b=> b.MigrationsAssembly("SAAPU.Web")));
-                
+
             services.AddIdentity<SAAPUIdentityUser, SAAPUIdentityRole>()
                 .AddEntityFrameworkStores<SAAPUIdentityDbContext>()
                 .AddDefaultTokenProviders();
