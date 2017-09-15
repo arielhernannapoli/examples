@@ -4010,11 +4010,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Code\\SAAPU.Prototype\\SAAPU.Data.EF\\SAAPU.Data.EF.csproj",
+      "projectUniqueName": "c:\\Code\\SAAPU.Prototype\\SAAPU.Data.EF\\SAAPU.Data.EF.csproj",
       "projectName": "SAAPU.Data.EF",
-      "projectPath": "C:\\Code\\SAAPU.Prototype\\SAAPU.Data.EF\\SAAPU.Data.EF.csproj",
+      "projectPath": "c:\\Code\\SAAPU.Prototype\\SAAPU.Data.EF\\SAAPU.Data.EF.csproj",
       "packagesPath": "C:\\Users\\arnapoli\\.nuget\\packages\\",
-      "outputPath": "C:\\Code\\SAAPU.Prototype\\SAAPU.Data.EF\\obj\\",
+      "outputPath": "c:\\Code\\SAAPU.Prototype\\SAAPU.Data.EF\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

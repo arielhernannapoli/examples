@@ -4036,11 +4036,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Code\\SAAPU.Prototype\\SAAPU.Data.Identity\\SAAPU.Data.Identity.csproj",
+      "projectUniqueName": "c:\\Code\\SAAPU.Prototype\\SAAPU.Data.Identity\\SAAPU.Data.Identity.csproj",
       "projectName": "SAAPU.Data.Identity",
-      "projectPath": "C:\\Code\\SAAPU.Prototype\\SAAPU.Data.Identity\\SAAPU.Data.Identity.csproj",
+      "projectPath": "c:\\Code\\SAAPU.Prototype\\SAAPU.Data.Identity\\SAAPU.Data.Identity.csproj",
       "packagesPath": "C:\\Users\\arnapoli\\.nuget\\packages\\",
-      "outputPath": "C:\\Code\\SAAPU.Prototype\\SAAPU.Data.Identity\\obj\\",
+      "outputPath": "c:\\Code\\SAAPU.Prototype\\SAAPU.Data.Identity\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
