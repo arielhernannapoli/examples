@@ -19,16 +19,17 @@ namespace SAAPU.Web.Ldap
             _config = config.Value;
             _connection = new LdapConnection
             {
-                SecureSocketLayer = true
+                SecureSocketLayer = false
             };
         }
 
         public AppUser Login(string username, string password)
         {
-            _connection.Connect(_config.Url, LdapConnection.DEFAULT_SSL_PORT);
-            _connection.Bind(_config.BindDn, _config.BindCredentials);
+            _connection.Connect(_config.Url, LdapConnection.DEFAULT_PORT);
+            _connection.Bind(LdapConnection.Ldap_V3, String.Format(@"USERSAD\{0}", username), password);
 
-            var searchFilter = string.Format(_config.SearchFilter, username);
+            var searchFilter = _config.SearchFilter;
+            
             var result = _connection.Search(
                 _config.SearchBase,
                 LdapConnection.SCOPE_SUB,
