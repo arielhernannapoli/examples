@@ -10,7 +10,9 @@ const appRoutes: Routes = [
         pathMatch: 'full'
     },
     { path: 'index', component: AppComponent },
-    { path: 'login', loadChildren: './login/login.module#LoginModule'}
+    { path: 'login', loadChildren: 'app/login/login.module#LoginModule' },
+    { path: 'admin', loadChildren: 'app/admin/admin.module#AdminModule' },
+    { path: 'home', loadChildren: 'app/home/home.module#HomeModule' }
 ];
 
 export const appRoutingProviders: any[] = [];
