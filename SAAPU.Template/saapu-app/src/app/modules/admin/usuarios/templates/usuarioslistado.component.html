@@ -1,0 +1,24 @@
+<h2>{{title}}</h2>
+<hr />  
+<button type="button" class="btn btn-primary" (click)="onCrearUsuarioClick()">Crear usuario</button>
+<table class="table">
+  <thead class="thead-inverse">
+    <tr>
+      <th>Id</th>
+      <th>Nombre</th>
+      <th>Usuario</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let usuario of usuarios">
+      <th scope="row">{{ usuario.id }}</th>
+      <td>{{ usuario.nombre }}</td>
+      <td>{{ usuario.usuario }}</td>
+      <td>
+        <button class="btn btn-secondary" (click)="onEditarUsuarioClick(usuario.id)">Editar</button>
+        <button class="btn btn-secondary" (click)="onEliminarUsuarioClick(usuario.id)">Eliminar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

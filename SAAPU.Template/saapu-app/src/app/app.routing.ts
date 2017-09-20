@@ -11,9 +11,9 @@ const appRoutes: Routes = [
         pathMatch: 'full'
     },
     { path: 'index', component: AppComponent },
-    { path: 'login', loadChildren: 'app/login/login.module#LoginModule' },
-    { path: 'admin', loadChildren: 'app/admin/admin.module#AdminModule' },
-    { path: 'home', loadChildren: 'app/home/home.module#HomeModule' },
+    { path: 'login', loadChildren: 'app/modules/login/login.module#LoginModule' },
+    { path: 'admin', loadChildren: 'app/modules/admin/admin.module#AdminModule' },
+    { path: 'home', loadChildren: 'app/modules/home/home.module#HomeModule' },
     { path: '**', component: AppErrorComponent}
 ];
 

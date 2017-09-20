@@ -3,8 +3,8 @@ import { Router, ParamMap, ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: 'app-root',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  templateUrl: './templates/login.component.html',
+  styleUrls: ['./styles/login.component.css']
 })
 
 export class LoginComponent implements OnInit {
@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit() {
-    this.router.navigate(['index']);
+    this.router.navigate(['admin']);
   }
 
 }
