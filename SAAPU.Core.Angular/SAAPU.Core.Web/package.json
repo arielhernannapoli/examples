@@ -3,8 +3,8 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "start": "webpack --config webpack.config.js --watch --progress --profile",
-    "build": "webpack --config webpack.config.js --progress --profile",    
+    "start": "webpack --config webpack.config.vendor.js --watch --progress --profile",
+    "build": "webpack --config webpack.config.js --progress --profile",
     "prod": "webpack --env.NODE_ENV=production --config webpack.config.js --progress",
     "test": "karma start ClientApp/test/karma.conf.js"
   },
@@ -26,7 +26,7 @@
     "aspnet-prerendering": "^3.0.1",
     "aspnet-webpack": "^2.0.1",
     "awesome-typescript-loader": "3.2.1",
-    "bootstrap": "3.3.7",
+    "bootstrap": "^4.0.0-alpha.4",
     "css": "2.2.1",
     "css-loader": "0.28.4",
     "es6-shim": "0.35.3",
@@ -43,6 +43,7 @@
     "reflect-metadata": "0.1.10",
     "rxjs": "5.4.2",
     "style-loader": "0.18.2",
+    "tether": "http://registry.npmjs.org/tether/-/tether-1.4.0.tgz",
     "to-string-loader": "1.1.5",
     "typescript": "2.4.1",
     "url-loader": "0.5.9",

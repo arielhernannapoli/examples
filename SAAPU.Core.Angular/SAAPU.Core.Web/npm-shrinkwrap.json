@@ -1,5 +1,5 @@
 {
-  "name": "SAAPU_Core_Web",
+  "name": "saapu_core_web",
   "version": "0.0.0",
   "dependencies": {
     "@angular/animations": {
@@ -439,9 +439,9 @@
       }
     },
     "bootstrap": {
-      "version": "3.3.7",
-      "from": "bootstrap@3.3.7",
-      "resolved": "https://registry.npmjs.org/bootstrap/-/bootstrap-3.3.7.tgz"
+      "version": "4.0.0-alpha.4",
+      "from": "bootstrap@4.0.0-alpha.4",
+      "resolved": "http://registry.npmjs.org/bootstrap/-/bootstrap-4.0.0-alpha.4.tgz"
     },
     "brace-expansion": {
       "version": "1.1.8",
@@ -1750,7 +1750,7 @@
     },
     "jquery": {
       "version": "3.2.1",
-      "from": "jquery@3.2.1",
+      "from": "https://registry.npmjs.org/jquery/-/jquery-3.2.1.tgz",
       "resolved": "https://registry.npmjs.org/jquery/-/jquery-3.2.1.tgz"
     },
     "js-base64": {
@@ -3250,6 +3250,11 @@
       "version": "0.2.6",
       "from": "tapable@>=0.2.5 <0.3.0",
       "resolved": "https://registry.npmjs.org/tapable/-/tapable-0.2.6.tgz"
+    },
+    "tether": {
+      "version": "1.4.0",
+      "from": "http://registry.npmjs.org/tether/-/tether-1.4.0.tgz",
+      "resolved": "http://registry.npmjs.org/tether/-/tether-1.4.0.tgz"
     },
     "through": {
       "version": "2.3.8",
