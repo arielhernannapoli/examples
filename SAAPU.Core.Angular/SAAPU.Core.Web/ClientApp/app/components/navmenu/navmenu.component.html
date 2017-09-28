@@ -1,0 +1,50 @@
+<nav class="navbar navbar-fixed-top navbar-expand-lg navbar-dark bg-inverse">
+    <a class="nav navbar-brand">SAAPU</a>
+
+    <div class="" *ngIf="isAuthenticated">
+        <ul class="nav navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" routerLink="" routerLinkActive="active">Inicio <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item" *ngIf="isAuthenticated && isAdmin">
+                <a class="nav-link" routerLink="/home/proveedores" routerLinkActive="active">Proveedores</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/home/recursos" routerLinkActive="active">Recursos</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuMasivo" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Novedades
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuMasivo">
+                    <a class="dropdown-item" *ngIf="isAuthenticated && isAdmin" routerLink="/novedades/proveedores" routerLinkActive="active">Carga Masiva de Proveedores</a>
+                    <a class="dropdown-item" routerLink="/novedades/recursos" routerLinkActive="active">Carga Masiva de Recursos</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuReportes" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Reportes
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuReportes">
+                    <a class="dropdown-item" routerLink="/reportes/duplicaciones" routerLinkActive="active">Reporte de Duplicaciones</a>
+                    <a class="dropdown-item" routerLink="/reportes/vencimientos" routerLinkActive="active">Reporte de Vencimientos</a>
+                    <a class="dropdown-item" routerLink="/reportes/logueo" routerLinkActive="active">Reporte de Acciones</a>
+                </div>
+            </li>
+        </ul>
+        <div class="nav navbar-nav-scroll" style="float:right;">
+            <ul class="nav navbar-nav">
+                <li class="nav-item dropdown" *ngIf="isAuthenticated && isAdmin">
+                    <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuAdmin" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Administración
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuAdmin">
+                        <a class="dropdown-item" routerLink="/admin/usuarios" routerLinkActive="active">Usuarios</a>
+                        <a class="dropdown-item" routerLink="/admin/perfiles" routerLinkActive="active">Perfiles</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="#" class="nav-link" (click)="logout()">Salir</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
