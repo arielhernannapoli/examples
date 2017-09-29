@@ -21,6 +21,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\admin\components\perfiles\edicion.component.ts" />
+    <None Remove="ClientApp\admin\components\perfiles\listado.component.ts" />
+    <None Remove="ClientApp\admin\components\usuarios\edicion.component.ts" />
+    <None Remove="ClientApp\admin\components\usuarios\listado.component.ts" />
     <None Remove="ClientApp\app\components\home\login.ts" />
   </ItemGroup>
 
@@ -36,6 +40,10 @@
   <ItemGroup>
     <TypeScriptCompile Include="ClientApp\admin\admin.module.browser.ts" />
     <TypeScriptCompile Include="ClientApp\admin\admin.module.server.ts" />
+    <TypeScriptCompile Include="ClientApp\admin\components\perfiles\edicion.component.ts" />
+    <TypeScriptCompile Include="ClientApp\admin\components\perfiles\listado.component.ts" />
+    <TypeScriptCompile Include="ClientApp\admin\components\usuarios\edicion.component.ts" />
+    <TypeScriptCompile Include="ClientApp\admin\components\usuarios\listado.component.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\home\login.ts" />
   </ItemGroup>
 
