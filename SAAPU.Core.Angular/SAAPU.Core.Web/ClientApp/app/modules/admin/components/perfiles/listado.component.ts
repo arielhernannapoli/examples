@@ -8,17 +8,12 @@ import { Router, ParamMap, ActivatedRoute } from "@angular/router";
 
   export class PerfilesListadoComponent implements OnInit {
 
-    perfiles : Perfil[];
     title = "Listado de Perfiles de Administradores";
   
     constructor(
-      private perfilService: PerfilesService, 
       private router: Router,
       private route: ActivatedRoute) 
     { 
-      perfilService.getProfile().then( data => {
-        this.perfiles = data;
-      });
       
     }
   
@@ -35,10 +30,6 @@ import { Router, ParamMap, ActivatedRoute } from "@angular/router";
       }
     
       onEliminarPerfilClick(id: number) {
-        this.perfilService.deleteProfile(id).then(data => {
-          this.perfilService.getProfile().then( data => {
-            this.perfiles = data;
-          });
-        });
+
       }
   }

@@ -21,10 +21,10 @@ import { HomeComponent } from './components/home/home.component';
         FormsModule,
         RouterModule.forRoot([
             { path: '', redirectTo: 'admin', pathMatch: 'full' },
-            { path: 'home', component: HomeComponent },
-            { path: 'admin', loadChildren: 'admin/admin.module.browser#AdminModule' },
+            { path: 'home', component: HomeComponent },            
+            { path: 'admin', loadChildren: 'app/modules/admin/admin.module.browser#AdminModule' },
             { path: '**', redirectTo: 'home' }
-        ])
+        ], { enableTracing: true})
     ]
 })
 export class AppModuleShared {
